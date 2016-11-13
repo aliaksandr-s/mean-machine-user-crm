@@ -48,7 +48,11 @@ angular.module('mainCtrl', [])
 	};
 
 	vm.createSample = function() {
-		Auth.createSampleUser();
+		Auth.createSampleUser()		
+			.then(function(data) {
+				vm.message = data.data.message;
+				console.log(vm.message)
+			})
 	};
 
 });

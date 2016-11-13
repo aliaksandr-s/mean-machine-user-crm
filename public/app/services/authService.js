@@ -49,7 +49,7 @@ angular.module('authService', [])
 	};
 
 	authFactory.createSampleUser = function() {
-		$http.post('/api/sample');
+		return $http.post('/api/sample')
 	};
 
 	// return auth factory object
